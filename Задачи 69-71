@@ -1,0 +1,7 @@
+## //задача 69-71
+uses GraphABC;
+var x := 50;
+repeat
+  Circle(x,100,10);
+  x += 20; //меняем данный параметр
+until x > 600;
