@@ -1,0 +1,18 @@
+// моё решение
+## //задача 32
+var x := 200.0;
+repeat
+  x /= 2;
+  Write(x :12:8);
+until x = 0;
+////////////////////
+//решение из ответов, так, на всякий случай
+program Program2;
+label m1;
+var a: real;
+begin
+  a := 100;
+  m1: Write(a :12:8);
+  a := a/2;
+  goto m1;
+end.
