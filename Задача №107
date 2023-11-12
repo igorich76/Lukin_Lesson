@@ -1,0 +1,45 @@
+## //задача №107 1 вариант
+var t: array [1..3, 1..4] of integer;
+
+t[1,1]:=-8; t[1,2]:=-14; t[1,3]:=-19; t[1,4]:=-18;
+t[2,1]:=25; t[2,2]:=28;  t[2,3]:=-26; t[2,4]:=20;
+t[3,1]:=11; t[3,2]:=18;  t[3,3]:=20;  t[3,4]:=25;
+
+for var i:=1 to 3 do 
+  for var j:=1 to 4 do Print(t[i,j]);
+var (maxi, mini) := (t[1,1],t[1,1]);
+
+Println();
+
+for var i:=1 to 3 do 
+  for var j:=1 to 4 do if (maxi < t[i,j]) then maxi := t[i,j];
+Println(maxi);
+
+for var i:=1 to 3 do 
+  for var j:=1 to 4 do if (mini > t[i,j]) then mini := t[i,j];
+Println(mini);
+
+Println('Разница:',maxi - mini)
+/////////////////////////////////////////////
+// усовершенствованный вариант
+## //задача №107
+var t: array [1..3, 1..4] of integer;
+t[1,1]:=-8; t[1,2]:=-14; t[1,3]:=-19; t[1,4]:=-18;
+t[2,1]:=25; t[2,2]:=28;  t[2,3]:=-26; t[2,4]:=20;
+t[3,1]:=11; t[3,2]:=18;  t[3,3]:=20;  t[3,4]:=25;
+
+for var i:=1 to 3 do 
+  for var j:=1 to 4 do Print(t[i,j]);
+var (maxi, mini) := (t[1,1],t[1,1]);
+
+Println();
+
+for var i:=1 to 3 do 
+  for var j:=1 to 4 do 
+    begin
+      if (maxi < t[i,j]) then maxi := t[i,j];
+      if (mini > t[i,j]) then mini := t[i,j];
+    end;
+Println('Макс:',maxi);
+Println('Мин:',mini);
+Println('Разница:',maxi - mini)
