@@ -1,0 +1,14 @@
+## //задача №105
+var mass := Arr(-21,12,-25,4,-5,30,-24);
+mass.Println();
+var (mini, cnt) := (mass[0], 0);
+for var i:=0 to Length(mass)-1 do
+  begin
+    if (mini > mass[i]) then 
+      begin
+        mini := mass[i];
+        cnt := i;
+      end;
+  end;
+Println('Самый морозный день:',mini);
+Println('Этот день по счёту:',cnt);
