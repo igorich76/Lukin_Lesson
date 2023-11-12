@@ -1,0 +1,9 @@
+## //задача 72
+uses GraphABC;
+var (x, y) := (50, 50);
+for var i:=1 to 25 do
+  begin
+    SetPixel(x, y, clBlue);
+    x += 20;
+    y += 15;
+  end;
