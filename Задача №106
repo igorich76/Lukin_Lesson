@@ -1,0 +1,7 @@
+## //задача №106
+var mass: array of integer := new integer[30];
+mass[0] := 1;
+mass[1] := 1;
+for var i:=2 to Length(mass)-1 do
+  mass[i] := mass[i-2] + mass[i-1];
+mass.Println;
