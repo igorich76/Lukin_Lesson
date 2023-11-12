@@ -1,0 +1,10 @@
+## //задача 34
+var x := 0;
+repeat
+  x += 1;
+  Print(x);
+until x = 100;
+repeat
+  x -= 1;
+  Print(x);
+until x = 1;
