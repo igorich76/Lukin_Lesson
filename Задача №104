@@ -1,0 +1,7 @@
+## //задача №104
+var mass := Arr(-21,12,-25,4,-5,30,-24);
+mass.Println();
+var cnt := 0;
+for var i:=0 to Length(mass)-1 do
+  if mass[i] < -20 then cnt += 1;
+Println(cnt);
