@@ -1,0 +1,8 @@
+## //задача 73
+uses GraphABC;
+var r := 220;
+for var i:=1 to 22 do
+  begin
+    Circle(300,225,r);
+    r -= 10;
+  end;
