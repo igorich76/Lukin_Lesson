@@ -2,7 +2,7 @@
 uses GraphABC;
 var r := 220;
 SetBrushColor(clYellow);
-for var i:=1 to 50 do
+for var i:=1 to 55 do
   begin
     Circle(300,230,r);
     r -= 4;
