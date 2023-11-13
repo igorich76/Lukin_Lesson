@@ -1,0 +1,7 @@
+## //задача №79 наклонные линии
+uses GraphABC;
+var x := 10;
+repeat
+  Line(x,0,x-100,480);
+  x += 10;
+until x > 800;
