@@ -1,8 +1,21 @@
 ## //задача №80 ряд квадратов
 uses GraphABC;
 var (x, y) := (10, 30);
+
 for var i:=1 to 20 do
   begin
     Rectangle(x,y,x+20,y+20);
     x += 30;
+  end;
+//////// усовершенствовал, закрашиваю квадраты
+## //задача №80
+uses GraphABC;
+var (x, y, xf, yf) := (10, 30, 15, 35);
+
+for var i:=1 to 20 do
+  begin
+    Rectangle(x,y,x+20,y+20);
+    FloodFill(xf, yf, clYellow);
+    x += 30;
+    xf += 30;
   end;
