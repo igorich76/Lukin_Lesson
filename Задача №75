@@ -1,0 +1,10 @@
+## //задача №75 коническая башня
+uses GraphABC;
+var (R, y) := (220, 230);
+SetBrushColor(clYellow);
+for var i:=1 to 55 do
+  begin
+    Circle(300,y,R);
+    R -= 4;
+    y -= 4;
+  end;
