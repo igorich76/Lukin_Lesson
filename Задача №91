@@ -20,3 +20,24 @@ for var i:=0 to 150 do
     x -= 2;
     y += 2
   end;
+//////////////// усовершенствованный вариант с репит, с ним удобнее, таким образом, окно = 640х480
+## //задача №91
+uses GraphABC;
+var (x, y) := (50, 100);
+Brush.Color := clGreen;
+LockDrawing;
+repeat
+  Window.Clear;
+  Circle(x,y,20);
+  Redraw;
+  Sleep(3);
+  x += 2;
+until x > 620;
+repeat
+  Window.Clear;
+  Circle(x,y,20);
+  Redraw;
+  Sleep(3);
+  x -= 2;
+  y += 2
+until y > 460;
