@@ -1,0 +1,44 @@
+## // задача №81. Сделал и окаймление доски жирной линией
+// крррасота!!!
+uses Graphabc;
+SetPenWidth(10);
+Rectangle(50,50,450,450);
+var (x, y) := (50, 50);//кортеж
+SetPenWidth(3);
+//////////////// вертикальные линии
+loop 9 do
+begin
+Line(x,y,x+400,y);
+y := y + 50; //увеличиваем у
+end;
+/////////////// горизонтальные линии
+(x, y) := (50, 50);
+loop 9 do
+begin
+Line(x,y,x,y+400);
+x := x + 50; //увеличиваем у
+end;
+///////////// окрашиваем
+(x, y) := (75, 75);
+loop 4 do
+begin
+    loop 4 do
+    begin
+        FloodFill(x, y, clBlue);
+        x += 100;
+    end;
+    (x, y) := (75, y);
+    y += 100;
+end;
+/////////////
+(x, y) := (125, 125);
+loop 4 do
+begin
+    loop 4 do
+    begin
+        FloodFill(x, y, clBlue);
+        y += 100;
+    end;
+    (x, y) := (x, 125);
+    x += 100;
+end;
