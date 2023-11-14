@@ -1,0 +1,8 @@
+## //задача №86
+uses GraphABC;
+
+for var i:=0 to 1000 do
+  begin
+    Circle(Random(640),Random(480),Random(50));
+    SetBrushColor(clRandom);
+  end; 
