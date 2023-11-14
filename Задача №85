@@ -1,0 +1,5 @@
+## //задача №85
+uses GraphABC;
+
+for var i:=0 to 100 do
+  Circle(Random(640),Random(480),20);
