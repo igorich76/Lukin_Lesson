@@ -1,0 +1,15 @@
+## //задача №89-90
+uses GraphABC;
+var (x1, x2, y2) := (50, 50, 50);
+Brush.Color := clGreen;
+LockDrawing;
+for var i:=0 to 200 do
+  begin
+    Window.Clear;
+    Circle(x1,200,10);
+    Circle(x2,y2,10);
+    Redraw;
+    Sleep(3);
+    x1 += 2;
+    y2 += 2;
+  end;
