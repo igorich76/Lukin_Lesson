@@ -11,3 +11,17 @@ for var i:=0 to 30 do
   y += 12;
   x := 50;
   end;
+////////////// другой вариант, уплотнил кружки
+## //задача 82
+uses GraphABC;
+var (x, y) := (50, 50);
+for var i:=0 to 30 do
+  begin
+    for var j:=0 to 55 do
+      begin
+        Circle(x, y, 10);
+        x += 10;
+      end;
+  y += 12;
+  x := 50;
+  end;
