@@ -1,0 +1,13 @@
+## //задача 82 так или не так, х.з.
+uses GraphABC;
+var (x, y) := (50, 50);
+for var i:=0 to 30 do
+  begin
+    for var j:=0 to 26 do
+      begin
+        Circle(x, y, 10);
+        x += 20;
+      end;
+  y += 12;
+  x := 50;
+  end;
