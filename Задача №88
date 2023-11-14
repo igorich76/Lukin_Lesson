@@ -1,0 +1,13 @@
+## //задача №88
+uses GraphABC;
+var x := 50;
+Brush.Color := clGreen;
+LockDrawing; //блокирование рисования в окне
+for var i:=0 to 300 do
+  begin
+    Window.Clear;
+    Circle(x,200,50);
+    Redraw; //вызов из внеэкранного буфера
+    Sleep(3);
+    x += 2;
+  end;
