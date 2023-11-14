@@ -1,0 +1,11 @@
+## //задача №87
+uses GraphABC;
+
+Rectangle(50,50,500,400);
+FloodFill(55,55,clBlack);
+for var i:=0 to 1000 do
+begin
+//SetPixel(Random(52,500),Random(52,400),clYellow);
+SetBrushColor(clRandom);
+Circle(Random(55,495),Random(55,395),2); // чтоб шарики не вылезали за границу
+end;
