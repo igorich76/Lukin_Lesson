@@ -4,7 +4,7 @@ var t := 0.0;
 var h := 0.0;
 var s := 0.0;
 repeat
-  Writeln('t=',t:5:1,'  s=',s:8:2,'  h=',h:6:2);
+  Writeln('t=',t:3:1,'  s=',s:6:2,'  h=',h:6:2);
   t += 0.2;
   s := v*t;
   h := 100-9.81*(t*t)/2;
