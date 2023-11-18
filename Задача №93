@@ -14,13 +14,10 @@ repeat
   x := x+dx; y := y+dy;
   if (x < 45) or (x > 595) then dx := -dx;
   if (y < 45) or (y > 435) then dy := -dy;
+  // "попадание" в лузу:
   if (x < 60) and (y < 60) // левая верхняя луза
   or (x < 60) and (y > 420) // левая нижняя луза 
   or (x > 580) and (y < 60) // правая верхняя луза
   or (x > 580) and (y > 420) // правая нижняя луза
-  then 
-    begin
-      Readln;
-      Halt;
-    end;
-until 2 > 3;
+  then break;
+until false;
