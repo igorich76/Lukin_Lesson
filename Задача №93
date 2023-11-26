@@ -44,3 +44,28 @@ repeat
   if (y < 45) or (y > 435) then dy := -dy;
 
 until false;
+//////////////////////// снова переделки. Ментор помог ///////////////////
+## //задача №93
+uses GraphABC, ABCObjects;
+
+Window.Title := 'Бильярд';
+var (x, y) := (Random(35,605), Random(35,445));
+var (dx, dy) := (Random(-5,5), Random(-5,5));
+Brush.Color := clLime;
+Rectangle(35,35,605,445); //как будто стол бильярдный...
+Brush.Color := clRed;
+
+var boll := new CircleABC(x,y,10,clRed);
+
+while (x in 60..580) or (y in 60..420) do
+  begin
+    x := x+dx; y := y+dy; // приращение аргумента
+    
+    boll.MoveTo(x,y); // перемещение шара
+
+    if (x < 45) or (x > 595) then dx := -dx; // проверка границ
+    if (y < 45) or (y > 435) then dy := -dy;
+  
+    Sleep(1); // сон
+    
+  end;
