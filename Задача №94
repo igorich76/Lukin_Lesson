@@ -1,0 +1,25 @@
+## //задача 94
+uses GraphABC;
+var (x, y) := (50, 40);
+var (dx, dy) := (1,1);
+var строка := 'Башня';
+var (v, t, h, s) := (20, 0.0, 0.0, 0.0);
+LockDrawing;
+repeat
+  Window.Clear;
+  Rectangle(0,40,50,440);
+  FloodFill(25, 250, clMaroon);
+  Rectangle(0,440,640,480);
+  FloodFill(50, 460, clLime);
+  TextOut(5,200,строка);
+  Brush.Color := clRed;
+  Circle(x,y,10);
+  Redraw;
+  SetPixel(x,y,clBlue);
+  t += 0.05;
+  s := v*t;
+  h := 4*(100-9.81*(t*t)/2);
+  x += dx+Round(s);
+  y += 400+dy-Round(h);
+  if (y > 450) then break;
+until false;
