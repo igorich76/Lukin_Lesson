@@ -15,7 +15,7 @@ repeat
   Brush.Color := clRed;
   Circle(x,y,10);
   Redraw;
-  SetPixel(x,y,clBlue);
+  SetPixel(x,y,clBlue); // не сохраняются, наверное
   t += 0.05;
   s := v*t;
   h := 4*(100-9.81*(t*t)/2);
