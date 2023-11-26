@@ -23,3 +23,28 @@ repeat
   y += 400+dy-Round(h);
   if (y > 450) then break;
 until false;
+///// вариант ментора, ABCObjects
+## //задача 94
+uses GraphABC, abcobjects;
+var (x, y) := (50, 40);
+var (dx, dy) := (1,1);
+var строка := 'Башня';
+var (v, t, h, s) := (20, 0.0, 0.0, 0.0);
+
+new RectangleABC(0,40,50,440, clMaroon);
+new RectangleABC(0,440,640,480, clLime);
+new TextABC(5, 200, 10, строка, clBlue);
+var stone:= new CircleABC(x, y, 10, clRed);
+
+repeat
+  new CircleABC(x, y, 1, clBlue);
+  
+  t += 0.05;
+  s := v*t;
+  h := 4*(100-9.81*(t*t)/2);
+  x += dx+Round(s);
+  y += 400+dy-Round(h);
+  
+  sleep(15);
+  stone.MoveTo(x, y);
+until y > 420;
