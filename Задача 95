@@ -1,0 +1,24 @@
+## //задача 95 не могу сделать и всё... :(((
+uses graphabc, abcobjects;
+new RectangleABC(0,300,640,180, clWhite);
+new CircleABC(50,290,10,clWhite);
+Line(30,300,65,275); // пушка
+Line(150,300,320,200);
+Line(320,200,490,300);
+new RectangleABC(550,280,50,20);
+var (x,y,a) := (65,275,45);
+var Снаряд := new CircleABC(x,y,5,clRed);
+var (v, t, h, s) := (1, 0.0, 0.0, 0.0);
+var (dx, dy) := (1,1);
+repeat
+  new CircleABC(x,y,1,clBlue);
+  
+  t += 0.05;
+  s := v*t*Cos(a);
+  h := v*t*Sin(a)-(9.81*(t*t))/2;
+  x += 10-dx-Round(s);
+  y += dy+Round(h);
+  
+  sleep(100);
+  Снаряд.MoveTo(x,y);
+until y > 300;
