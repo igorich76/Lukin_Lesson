@@ -1,0 +1,25 @@
+## //задача №106
+var mass: array of integer := new integer[30];
+mass[0] := 1;
+mass[1] := 1;
+for var i:=2 to Length(mass)-1 do
+  mass[i] := mass[i-2] + mass[i-1];
+mass.Println;
+
+/////////// решение без массивов, ох и попотел же я!
+
+## //Фибоначчи. Подсмотрел алгоритм на Питоне
+// но прогу сам сделал! без массивов!
+var n := ReadInteger;
+var (a,b,x) := (0,0,0);
+for var i:=1 to n do
+  begin
+    if i<=2 then 
+      begin
+        x:=1; a:=1; b:=1; Print(x);
+      end;
+    if i>2 then
+      begin
+        x:=a+b; a:=b; b:=x;Print(x);
+      end;
+  end;  
