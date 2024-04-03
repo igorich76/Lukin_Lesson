@@ -5,6 +5,14 @@ mass[1] := 1;
 for var i:=2 to Length(mass)-1 do
   mass[i] := mass[i-2] + mass[i-1];
 mass.Println;
+////////////////////////////////////////////////
+## //задача №106 в соответствие с теорией по Лукину С.Н.
+var mass: array[1..30] of integer;
+mass[1] := 1;
+mass[2] := 1;
+for var i:=3 to 30 do
+  mass[i] := mass[i-2] + mass[i-1];
+mass.Println;
 
 /////////// решение без массивов, ох и попотел же я!
 
